@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2021",                     // Target ECMAScript version
+    "module": "commonjs",                // Module system (you can choose "esnext" if you're using ES modules)
+    "jsx": "react",                      // JSX compiler (adjust based on your framework/library)
+    "strict": true,                      // Enable strict checking
+    "esModuleInterop": true,              // Enable compatibility with CommonJS imports
+    "skipLibCheck": true,                // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file naming
+    "moduleResolution": "node",          // Module resolution strategy
+    "resolveJsonModule": true,           // Enable JSON imports
+    "isolatedModules": true,             // Ensure each file is treated as a separate module
+    "noEmit": true                       // Do not emit compiled files during the build process
+  },
+  "include": ["src/**/*.tsx"],          // Include pattern for TypeScript files
+  "exclude": ["node_modules"]           // Exclude pattern for files or directories
+}

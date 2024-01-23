@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Check if an argument is provided
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <folder_name>"
+    exit 1
+fi
+
+folder_name=$1
+
+# Create src and test folders
+src_folder="src/$folder_name"
+test_folder="test/$folder_name"
+
+# Check if the folders already exist
+if [ -d "$src_folder" ] || [ -d "$test_folder" ]; then
+    echo "Folders $src_folder or $test_folder already exist. Aborting."
+    exit 1
+fi
+
+# Create the src and test folders
+mkdir -p "$src_folder"
+mkdir -p "$test_folder"
+touch $src_folder/input.txt
+touch $src_folder/example1.txt
+touch $src_folder/example2.txt
+
+echo "Folders created successfully:"
+echo "  $src_folder"
+echo "  $test_folder"
+
